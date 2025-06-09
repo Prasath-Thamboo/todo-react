@@ -1,9 +1,9 @@
-import { taskContainer } from "./components/taskContainer.jsx"
+import { TaskContainer } from "./components/taskContainer.jsx"
 
 function App() {
 
   return (
-    <taskContainer />
+    <TaskContainer />
   )
 }
 
