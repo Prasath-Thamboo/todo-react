@@ -1,8 +1,13 @@
+import { Header } from "./header/header"
+import { TaskInput } from "./taskInput/taskInput"
+
+
 
 export const TaskContainer = () => {
   return (
-    <div>
-      salutzffez
-    </div>
+    <main>
+      <Header />
+      <TaskInput />
+    </main>
   )
 }
