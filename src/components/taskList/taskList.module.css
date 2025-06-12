@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.element{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 20px;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emptyState{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

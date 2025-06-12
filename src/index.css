@@ -11,7 +11,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --main-color: tomato;
-  --pane-padding: 5px 42px;
+  --second-color: #6A5ACD;
+  --color-normal: grey;
 }
 
 #root {
@@ -42,14 +43,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #6A5ACD;
+  background-color: var(--second-color);
   cursor: pointer;
   transition: border-color 0.25s;
   
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--main-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
