@@ -20,3 +20,50 @@
     background-color: var(--main-color);
     
 }
+
+.default:hover{
+    background-color: var(--normal-color);
+
+}
+
+
+.success{
+    background-color: green;
+    
+}
+
+.success:hover{
+    background-color: var(--normal-color);
+
+}
+
+.id{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9999px;
+    font-weight: 900;
+    margin: 0 2px;
+    font-size: 0.8em;
+}
+
+.idDefault{
+   background-color: #fff;
+   color: var(--main-color);
+}
+
+
+.idSuccess{
+   background-color: green;
+}
+
+.contentDefault{
+    color: #fff;
+}
+
+.contentSuccess{
+    text-decoration: line-through;
+    color :black;
+}

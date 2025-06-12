@@ -1,6 +1,8 @@
 import { Header } from "./header/header"
 import { TaskInput } from "./taskInput/taskInput"
 import { TaskList } from "./taskList/taskList"
+import { Footer } from "./footer/footer"
+
 
 
 export const TaskContainer = () => {
@@ -9,6 +11,7 @@ export const TaskContainer = () => {
       <Header />
       <TaskInput />
       <TaskList />
+      <Footer />
     </main>
   )
 }
