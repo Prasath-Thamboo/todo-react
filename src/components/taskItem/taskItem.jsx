@@ -9,10 +9,10 @@ export const TaskItem = () => {
                 1
             </div>
             <div className={styles.contentDefault}>
-                Title Task : Ranger mon bureau
+                Tâche : Ranger mon bureau
             </div>
         </div>
-        <button> Delete </button>
+        <button>X</button>
     </li>
   )
 }

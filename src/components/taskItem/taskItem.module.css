@@ -1,7 +1,6 @@
 .item{
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -13,7 +12,8 @@
     border-radius: 8px;
     border: 1px solid ;
     padding: 25px;
-    
+    margin-bottom: 20px;
+
 }
 
 .default{
