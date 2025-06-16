@@ -17,13 +17,41 @@ export const TaskContainer = () => {
       setTaskTitle([...taskList, newTask])
   }
 
-  console.log(taskList)
+  const editTasks = (id, completedValue) => {
+    setTaskTitle(
+      taskList.map((task) => 
+        task.id === id ? {...task, completed: completedValue} : task 
+      )
+    )
+  }
+
+  const deleteTasks = (id) => {
+    setTaskTitle(taskList.filter((task) => task.id !== id))
+  }
+
+  const getTaskCount = () => {
+    const completedTasks = taskList.filter((task) => task.completed.length === true)
+    const incompletedTasks = taskList.length - completedTasks
+    return {
+      completedTasks, 
+      incompletedTasks
+    }  
+  }
+
+  const { completedTasks, incompletedTasks} = getTaskCount
+
+
 
   return (
     <main>
       <Header />
       <TaskInput addTask={addTask}/>
-      <TaskList />
+      <TaskList 
+        taskList={taskList} 
+        editTasks={editTasks} 
+        deleteTasks={deleteTasks} 
+        incompletedTasks={incompletedTasks}
+      />
       <Footer />
     </main>
   )
