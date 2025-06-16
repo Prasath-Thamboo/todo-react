@@ -17,6 +17,7 @@ export const TaskContainer = () => {
       setTaskTitle([...taskList, newTask])
   }
 
+  console.log(taskList)
 
   return (
     <main>
