@@ -6,7 +6,7 @@ import { useState } from "react"
 
 export const TaskContainer = () => {
 
-  const [taskList, setTaskTitle] = useState([])
+  const [taskList, setTaskList] = useState([])
 
   const addTask = (title) => {
       const newTask = {
@@ -14,32 +14,31 @@ export const TaskContainer = () => {
         title: title,
         completed: false, 
       }
-      setTaskTitle([...taskList, newTask])
+      setTaskList([...taskList, newTask])
   }
 
-  const editTasks = (id, completedValue) => {
-    setTaskTitle(
+  const editTask = (id, completedValue) => {
+    setTaskList(
       taskList.map((task) => 
         task.id === id ? {...task, completed: completedValue} : task 
       )
     )
   }
 
-  const deleteTasks = (id) => {
-    setTaskTitle(taskList.filter((task) => task.id !== id))
+  const deleteTask = (id) => {
+    setTaskList(taskList.filter((task) => task.id !== id))
   }
 
   const getTaskCount = () => {
-    const completedTasks = taskList.filter((task) => task.completed.length === true)
-    const incompletedTasks = taskList.length - completedTasks
+    const completedTask = taskList.filter((task) => task.completed).length
+    const incompletedTask = taskList.length - completedTask
     return {
-      completedTasks, 
-      incompletedTasks
+      completedTask, 
+      incompletedTask
     }  
   }
 
-  const { completedTasks, incompletedTasks} = getTaskCount
-
+  const { completedTask, incompletedTask} = getTaskCount()
 
 
   return (
@@ -48,9 +47,9 @@ export const TaskContainer = () => {
       <TaskInput addTask={addTask}/>
       <TaskList 
         taskList={taskList} 
-        editTasks={editTasks} 
-        deleteTasks={deleteTasks} 
-        incompletedTasks={incompletedTasks}
+        editTask={editTask} 
+        deleteTask={deleteTask} 
+        incompletedTask={incompletedTask}
       />
       <Footer />
     </main>

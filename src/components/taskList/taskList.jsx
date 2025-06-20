@@ -5,17 +5,25 @@ export const TaskList = ({
   taskList, 
   editTask, 
   deleteTask,
-  incompledtedTasks, 
+  incompletedTask, 
 
 }) => {
+
+  const tasksList = taskList.map((task) => (
+  <TaskItem key={task.id} />))
+
   return (
     <div className={styles.element}>
         <h2 className={styles.title}>
-            Il te reste encore {incompledtedTasks} tâches à accomplir
+            Il te reste encore {incompletedTask} tâches à accomplir
         </h2>
-        <ul className={styles.container}>
-            <TaskItem />
-        </ul>
+        
+            {taskList && taskList.length > 0 && (
+              <ul className={styles.container}>
+                {tasksList}
+              </ul>
+            )}
+        
     </div>
   )
 }
